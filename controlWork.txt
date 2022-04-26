@@ -1,0 +1,30 @@
+Hello, Here is some documentation regarding my assembly language for my 8-bit 
+programmable computer's microarchitecture. Listed below will be the instructions that I 
+currently have along with the bits that correspond to my control word. 
+
+bits 0-15 counting from the left represnt vairous signal pins that correspond to my
+ttl chips that are on my breadboard. This is what controls each module and tells it
+things like when to read from the bus, write to memory, write to the bus ect...
+
+bits 16, 17, & 18 are my step bits 
+
+and the last 4 from the left represent the instruction itself  
+
+	instruction	step	hlt mi ri ro io ii a1 a0 e0 su bi 01 ce co j
+FETCH	   xxxx	         000	 0   1  0  0  0  0  0  0  0  0  0  0  0  1 0
+	   xxxx	         001	 0   0  0  1  0  1  0  0  0  0  0  0  1  0 0
+
+
+LDA	   0001          010     0   1  0  0  1  0  0  0  0  0  0  0  0  0 0
+	   0001		 011     0   0  0  1  0  0  1  0  0  0  0  0  0  0 0
+           0001		 100	 0   0  0  0  0  0  0  0  0  0  0  0  0  0 0
+
+
+ADD	   0010		 010     0   1  0  0  1  0  0  0  0  0  0  0  0  0 0
+	   0010		 011	 0   0  0  1  0  0  0  0  0  0  1  0  0  0 0
+	   0010		 100	 0   0  0  0  0  0  1  0  1  0  0  0  0  0 0
+
+
+OUT	   1110		 010	 0   0  0  0  0  0  0  1  0  0  0  1  0  0 0
+	   1110		 011	 0   0  0  0  0  0  0  0  0  0  0  0  0  0 0
+	   1110		 100	 0   0  0  0  0  0  0  0  0  0  0  0  0  0 0
