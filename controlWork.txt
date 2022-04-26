@@ -28,3 +28,31 @@ ADD	   0010		 010     0   1  0  0  1  0  0  0  0  0  0  0  0  0 0
 OUT	   1110		 010	 0   0  0  0  0  0  0  1  0  0  0  1  0  0 0
 	   1110		 011	 0   0  0  0  0  0  0  0  0  0  0  0  0  0 0
 	   1110		 100	 0   0  0  0  0  0  0  0  0  0  0  0  0  0 0
+
+
+The following control word signals take on the following meaning: 
+
+	*hlt -  halt bit
+	*mi -	memory address register in bit
+	*ri -	RAM in bit
+	*ro - 	RAM out bit
+	*io -   nstruction register out bit
+	*ii - 	instruction register in bit
+	*a1 - 	A register in bit
+	*ao - 	A register out bit 
+	*eo - 	sum out bit
+ 	*su - 	subtract bit
+	*bi -   B register in bit
+	*oi - 	output register in
+	*ce - 	counter enable bit
+	*co -	counter out bit 
+	*j - 	jump bit
+
+
+
+
+
+
+
+
+
