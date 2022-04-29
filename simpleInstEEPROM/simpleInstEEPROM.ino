@@ -214,12 +214,29 @@ void setup(){
   // Had to come in here and change when the loop ended...
   // ... It is now looping such that address < sizeof(data)/sizeof(data[0])
   Serial.print("Programming EEPROM");    //Display message to user
+
+  //Here is where I program the first 128 bytes into the EEPROM
   for (int address = 0; address < sizeof(data)/sizeof(data[0]); address += 1){
 
     // Had to shift the data that is pulled out of the data[] struct and right shift it by 8
     // This allows for me to look at either the far right 8 bits or the far left 8 bit... 
-    // ... depending on which EEPROM I want to target
+    // ... depending on which EEPROM I want to target... In this particular case, it will be the far right
     writeEEPROM(address, data[address] >> 8);      //Write to mem address
+
+    //check if multiple of 64
+    if (address % 64 == 0){
+      
+      Serial.print(".");    //If so, print a '.'
+    }
+  }
+
+  //Here is where I program the second 128 bytes into the EEPROM
+  for (int address = 0; address < sizeof(data)/sizeof(data[0]); address += 1){
+
+    // Had to shift the data that is pulled out of the data[] struct and right shift it by 8
+    // This allows for me to look at either the far right 8 bits or the far left 8 bit... 
+    // ... depending on which EEPROM I want to target... In this particular case, it will be the far left
+    writeEEPROM(address + 128, data[address]);      //Write to mem address
 
     //check if multiple of 64
     if (address % 64 == 0){
