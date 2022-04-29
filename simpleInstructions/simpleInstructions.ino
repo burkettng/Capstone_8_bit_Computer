@@ -156,28 +156,26 @@ void printContents(){
 //I will now be programming the EEPROM to interpret the logic that will run the CPU.
 
 /****** Notice how each instruction starts off with the FETCH instruction!!! ******/
-uint_16 dataArr[]= {
+uint16_t data[]= {
   
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0               //0000 - NOP... encoding for NO operation inst.
-        MI|CO, RO|II|CE, IO, MI, RO, AI, 0, 0, 0, 0     //0001 - LDA... encoding for the load A inst.
-        MI|CO, RO|II|CE, IO|MI, RO|BI, EO|AI, 0, 0, 0   //0010 - ADD... encoding for the ADD inst.
-        MI|CO, RO|II|CE, AO|OI, 0, 0, 0, 0, 0           //1110 - OUT... encoding for the Out inst.
-        MI|CO, RO|II|CE, HTL, 0, 0, 0, 0, 0             //1111 - HLT... encoding for Hault inst.
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,               //0000 - NOP... encoding for NO operation inst.
+        MI|CO, RO|II|CE, IO, MI, RO, AI, 0, 0, 0, 0,     //0001 - LDA... encoding for the load A inst.
+        MI|CO, RO|II|CE, IO|MI, RO|BI, EO|AI, 0, 0, 0,   //0010 - ADD... encoding for the ADD inst.
+        MI|CO, RO|II|CE, AO|OI, 0, 0, 0, 0, 0,           //1110 - OUT... encoding for the Out inst.
+        MI|CO, RO|II|CE, HLT, 0, 0, 0, 0, 0,             //1111 - HLT... encoding for Hault inst.
         
         //The commands below I have not defined yet!!!!!!
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //0011 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //0100 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //0101 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //0110 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //0111 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1000 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1001 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1010 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1011 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1100 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1101 - NOP... encoding for inst. no operation
-        
-        
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0011 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0100 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,         //0101 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0110 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0111 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //1000 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //1001 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //1010 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //1011 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //1100 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //1101 - NOP... encoding for inst. no operation     
 };
 
 /*
