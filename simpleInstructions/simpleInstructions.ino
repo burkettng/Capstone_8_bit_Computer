@@ -161,7 +161,7 @@ uint_16 dataArr[]= {
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0               //0000 - NOP... encoding for inst. no operation
         MI|CO, RO|II|CE, IO, MI, RO, AI, 0, 0, 0, 0     //0001 - LDA... encoding for the load A inst.
         MI|CO, RO|II|CE, IO|MI, RO|BI, EO|AI, 0, 0, 0   //0010 - ADD... encoding for the ADD inst.l 
-        MI|CO, RO|II|CE, AO|IO, 0, 0, 0, 0, 0           //1110 - HTL... encoding for the Halt inst.
+        MI|CO, RO|II|CE, AO|OI, 0, 0, 0, 0, 0           //1110 - OUT... encoding for the Out inst.
         
         //The commands below I have not defined yet!!!!!!
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //0011 - NOP... encoding for inst. no operation
@@ -175,7 +175,7 @@ uint_16 dataArr[]= {
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1011 - NOP... encoding for inst. no operation
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1100 - NOP... encoding for inst. no operation
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1101 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1111 - NOP... encoding for inst. no operation
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0          //1111 - NOP... encoding for inst. no operation 
         
 };
 
