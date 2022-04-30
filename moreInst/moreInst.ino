@@ -163,11 +163,15 @@ uint16_t data[]= {
         MI|CO, RO|II|CE, IO|MI, RO|BI, EO|AI, 0, 0, 0,   //0010 - ADD... encoding for the ADD inst.
         MI|CO, RO|II|CE, AO|OI, 0, 0, 0, 0, 0,           //1110 - OUT... encoding for the Out inst.
         MI|CO, RO|II|CE, HLT, 0, 0, 0, 0, 0,             //1111 - HLT... encoding for Hault inst.
+
+        //Here is wehre I add in a few more instructios for my CPU logic
+        MI|CO, RO|II|CE, IO|MI, AO|RI, 0, 0, 0, 0,       //0100 - STA... encoding for storing reg A int.
+        MI|CO, RO|II|CE, IO|AI, 0, 0, 0, 0, 0,           //0101 - LDI... encoding for inst. no operation
         
         //The commands below I have not defined yet!!!!!!
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0011 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0100 - NOP... encoding for inst. no operation
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,         //0101 - NOP... encoding for inst. no operation
+        
+        
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0101 - NOP... encoding for inst. no operation
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0110 - NOP... encoding for inst. no operation
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0111 - NOP... encoding for inst. no operation
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //1000 - NOP... encoding for inst. no operation
