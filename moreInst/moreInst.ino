@@ -167,11 +167,14 @@ uint16_t data[]= {
         //Here is wehre I add in a few more instructios for my CPU logic
         MI|CO, RO|II|CE, IO|MI, AO|RI, 0, 0, 0, 0,       //0100 - STA... encoding for storing reg A int.
         MI|CO, RO|II|CE, IO|AI, 0, 0, 0, 0, 0,           //0101 - LDI... encoding for inst. no operation
+
+        /****** Here is the JUMP instruction... This will allow me to jump around in my program ******/
+        MI|CO, RO|II|CE, IO|J, 0, 0, 0, 0, 0,            //0101 - JMP... encoding for inst. no operation
         
         //The commands below I have not defined yet!!!!!!
         
         
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0101 - NOP... encoding for inst. no operation
+        
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0110 - NOP... encoding for inst. no operation
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //0111 - NOP... encoding for inst. no operation
         MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,          //1000 - NOP... encoding for inst. no operation
