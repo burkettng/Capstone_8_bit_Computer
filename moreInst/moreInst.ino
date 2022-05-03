@@ -158,7 +158,7 @@ void printContents(){
 /****** Notice how each instruction starts off with the FETCH instruction!!! ******/
 uint16_t data[]= {
   
-        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,               //0000 - NOP... encoding for NO operation inst.
+        MI|CO, RO|II|CE, 0, 0, 0, 0, 0, 0,                //0000 - NOP... encoding for NO operation inst.
         MI|CO, RO|II|CE, IO, MI, RO, AI, 0, 0, 0, 0,     //0001 - LDA... encoding for the load A inst.
         MI|CO, RO|II|CE, IO|MI, RO|BI, EO|AI, 0, 0, 0,   //0010 - ADD... encoding for the ADD inst.
         MI|CO, RO|II|CE, AO|OI, 0, 0, 0, 0, 0,           //1110 - OUT... encoding for the Out inst.

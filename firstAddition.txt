@@ -1,0 +1,6 @@
+LDI 3		; Here I use a load immeidate instruction with a value of 3 to load into regA
+STA 15		; Here I store the value 3 that was loaded into regA into address 15
+LDI 0		; Load zero into the regA
+ADD 15 		; Add the contents of address 15 to regA
+OUT 		; Output that onto the output register
+JMP 3		; Here is where I will jump back to ADD 15
